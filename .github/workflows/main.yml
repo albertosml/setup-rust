@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test the action
     steps:
-      - name: Enter into code directory
-        run: cd rust_code
       - uses: actions/checkout@v2
+      - name: Enter into code directory
+        working-directory: ./rust_code
       - uses: ./
         with:
           rust-version: 'latest'
