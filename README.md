@@ -36,3 +36,5 @@
 	with:
 		run-tests: false
 	```
+
+Finally, you can also see more real examples on this [file](.github/workflows/main.yml).
