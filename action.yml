@@ -1,4 +1,4 @@
-name: 'Setup Rust'
+name: 'Setup Rust for tests'
 description: 'Github action to set up Rust environment and running the tests'
 inputs:
   context:
