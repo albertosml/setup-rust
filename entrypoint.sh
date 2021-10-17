@@ -10,13 +10,13 @@ echo "Going to \"$context\" directory"
 cd $context
 
 # Inform that we are installing the project.
-echo "Installing the project"
+#echo "Installing the project"
 
 # Install project.
-cargo install
+#cargo install
 
 # Let user know that the project has been installed succesfully.
-echo "Project installed successfully"
+#echo "Project installed successfully"
 
 # Run tests if specified.
 run_tests=$2
