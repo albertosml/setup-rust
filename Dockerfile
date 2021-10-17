@@ -1,8 +1,5 @@
-# Obtain the rust version to download.
-ARG RUST_VERSION
-
-# Download Rust image
-FROM rust:${RUST_VERSION}
+# Download latest Rust image
+FROM rust:latest
 
 # Copy the code file to the container.
 COPY entrypoint.sh /entrypoint.sh
