@@ -10,7 +10,6 @@ jobs:
         with:
           rust-version: 'latest'
           run-tests: false
-        working-directory: ./rust_code
       - name: Enter into code directory
         run: cargo test
         working-directory: ./rust_code
