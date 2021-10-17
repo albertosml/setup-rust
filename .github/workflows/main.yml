@@ -1,15 +1,33 @@
 on: [push]
 
 jobs:
-  test_action_job:
+  test_action_job_tests_false:
     runs-on: ubuntu-latest
-    name: A job to test the action
+    name: A job to test the action without tests in action
     steps:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          rust-version: 'latest'
+          context: './rust_code'
           run-tests: false
-      - name: Enter into code directory
+      - name: Enter into code directory and run tests
+        run: cargo test
+        working-directory: ./rust_code
+  test_action_job_tests_true:
+    runs-on: ubuntu-latest
+    name: A job to test the action with tests inside the action
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          context: './rust_code'
+          run-tests: true
+  test_action_job_no_args:
+    runs-on: ubuntu-latest
+    name: A job to test the action without arguments
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+      - name: Enter into code directory and run tests
         run: cargo test
         working-directory: ./rust_code

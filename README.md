@@ -2,9 +2,9 @@
 
 ## Inputs
 
-### rust_version
+### context
 
-**Required** Rust version to execute, it must be a tag of the Rust official Docker image from [DockerHub](https://hub.docker.com/_/rust?tab=tags). Default value: `"latest"`
+**Optional** Directory to execute the tests. Default value: `"."`
 
 ### run_tests
 
@@ -12,34 +12,27 @@
 
 ## Example usages
 
-1. Build rust environment with the `"buster"` tag from the official Rust Docker image. Also, run the tests after the building.
+1. Run the tests in the specified directory.
 
 	```
 	uses: actions/setup-rust@v1
 	with:
-		rust_version: 'buster'
-		run_tests: true
+		context: './rust_code'
+		run-tests: true
 	```
 
-2. Build rust environment with the `"latest"` tag from the official Rust Docker image. Also, don't run the tests after the building.
-
-	```
-	uses: actions/setup-rust@v1
-	with:
-		rust_version: 'latest'
-		run_tests: false
-	```
-
-3. Build rust environment with the `"bullseye"` tag from the official Rust Docker image. Also, don't run the tests after the building as the argument has not been specified.
+2. Run the tests in the root directory.
 
 	```
 	uses: actions/setup-rust@v1
 	with:
-		rust_version: 'latest'
-		run_tests: false
+		run-tests: true
 	```
 
+3. Don't run the tests.
 
-
-
-
+	```
+	uses: actions/setup-rust@v1
+	with:
+		run-tests: false
+	```

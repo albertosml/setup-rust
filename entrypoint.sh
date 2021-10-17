@@ -1,16 +1,16 @@
 #!/bin/sh
 
-# Inform that we are installing the project.
-echo "Installing the project"
+# Set the directory to execute the installation and/or tests.
+context=$1
 
-# Install project.
-cargo install
+# Inform to the user about the context directory.
+echo "Going to \"$context\" directory"
 
-# Let user know that the project has been installed succesfully.
-echo "Project installed successfully"
+# Go to the context directory.
+cd $context
 
 # Run tests if specified.
-run_tests=$1
+run_tests=$2
 
 if [ "$run_tests" = true ] ; then
 	# Inform that the tests are being executed.
