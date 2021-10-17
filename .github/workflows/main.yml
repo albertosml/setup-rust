@@ -9,7 +9,7 @@ jobs:
       - uses: ./
         with:
           context: './rust_code'
-          rust-version: 'bullseye'
+          rust-version: bullseye
           run-tests: false
       - name: Enter into code directory
         run: cargo test
