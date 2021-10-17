@@ -6,9 +6,8 @@ jobs:
     name: A job to test the action
     steps:
       - uses: actions/checkout@v2
-      - name: Enter into code directory
-        working-directory: ./rust_code
       - uses: ./
         with:
           rust-version: 'latest'
           run-tests: true
+        working-directory: ./rust_code
