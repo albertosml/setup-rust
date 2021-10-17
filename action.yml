@@ -2,13 +2,9 @@ name: 'Setup Rust'
 description: 'Github action to set up Rust environment and running the tests'
 inputs:
   context:
-    description: 'Directory to set the context to do the install'
+    description: 'Directory to set the context to run the tests'
     required: false
     default: '.'
-  rust-version:
-    description: 'Rust version to execute, it must be a tag of the Rust official Docker image'
-    required: true
-    default: 'latest'
   run-tests:
     description: 'If we should run the tests or not'
     required: false
@@ -19,5 +15,3 @@ runs:
   args:
     - ${{ inputs.context }}
     - ${{ inputs.run-tests }}
-  env:
-    RUST_VERSION: ${{ inputs.rust-version }}
