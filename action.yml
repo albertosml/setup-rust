@@ -5,10 +5,10 @@ inputs:
     description: 'Rust version to execute, it must be a tag of the Rust official Docker image'
     required: true
     default: 'latest'
-	run-tests:
-		description: 'If we should run the tests or not'
-		required: false
-		default: false
+  run-tests:
+    description: 'If we should run the tests or not'
+    required: false
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
