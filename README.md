@@ -15,7 +15,7 @@
 1. Run the tests in the specified directory.
 
 	```
-	uses: actions/setup-rust@v1
+	uses: albertosml/setup-rust@v1
 	with:
 		context: './rust_code'
 		run-tests: true
@@ -24,7 +24,7 @@
 2. Run the tests in the root directory.
 
 	```
-	uses: actions/setup-rust@v1
+	uses: albertosml/setup-rust@v1
 	with:
 		run-tests: true
 	```
@@ -32,7 +32,7 @@
 3. Don't run the tests.
 
 	```
-	uses: actions/setup-rust@v1
+	uses: albertosml/setup-rust@v1
 	with:
 		run-tests: false
 	```
