@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  test_action_job:
+    runs-on: ubuntu-latest
+    name: A job to test the action
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          rust-version: 'latest'
+          run-tests: false
+      - name: Enter into code directory
+        run: cargo test
+        working-directory: ./rust_code
