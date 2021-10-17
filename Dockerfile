@@ -1,5 +1,5 @@
 # Obtain the rust version to download.
-ARG RUST_VERSION=latest
+ARG RUST_VERSION
 
 # Download Rust image
 FROM rust:${RUST_VERSION}
