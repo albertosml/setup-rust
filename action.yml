@@ -14,5 +14,5 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.run-tests }}
-	env:
-		RUST_VERSION: ${{ inputs.rust-version }}
+  env:
+    RUST_VERSION: ${{ inputs.rust-version }}
